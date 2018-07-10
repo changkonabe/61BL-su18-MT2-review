@@ -47,7 +47,11 @@ public class Magician<Abra, Kadabra> implements Iterable<Function<Abra, Kadabra>
         return null; //FIXME
     }
 
-    /** An iterator for the magician. */
+    /** An iterator for the magician, that essentially
+     *  iterates through the bag of tricks and returns the
+     *  next function at the index provided by the
+     *  selector.
+     */
     class TrickIterator implements Iterator<Function<Abra, Kadabra>> {
 
         // ADDTOME ? ? ?
@@ -58,7 +62,14 @@ public class Magician<Abra, Kadabra> implements Iterable<Function<Abra, Kadabra>
         }
 
         /** Return the next trick in the magician's bag,
-         *  selected based on the magician's trick selector.
+         *  selected based on the magician's trick selector,
+         *  initially starting at the very first function.
+         *  The selector should apply the function 
+         *  to the previous index used. 
+         * 
+         *  If the selector's returned value is out of bounds,
+         *  next index to use should be that value mod the size
+         *  of the list.
          */
         public Function<Abra, Kadabra> next() {
             return null; // FIXME
