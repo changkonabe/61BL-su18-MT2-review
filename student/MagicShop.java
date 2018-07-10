@@ -14,7 +14,7 @@ import java.util.function.IntUnaryOperator;
 public class MagicShop {
 
     /** Return a function that takes in a String and
-     *  returns the string 'rabbit'.
+     *  returns the string 'Rabbit!'.
      */
     public static Function<String, String> hatTrick() {
         return null; //FIXME
