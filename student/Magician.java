@@ -12,11 +12,28 @@ import java.util.List;
  *  The purpose of this class is to practice 
  *  working with iterators and (higher order) functions.
  *
+ *  The test for this class will not compile as it is
+ *  not complete. You will need to fill it in
+ *  to fit the specification for being iterable.
+ *
+ *  The Magician's iterator should behave as followed:
+ *
+ *  hasNext() should return if the magician has any more tricks
+ *  to perform as given by numOfRequests in the constructor.
+ *
+ *  next() should return the next trick in the magician's bag,
+ *  starting initially at the first trick in the bag.
+ *  Which trick to select next should be based on the trickSelector
+ *  in the constructor, which should take in the index of the current
+ *  trick performed and return the next trick's index. If the value
+ *  returned by the trickSelector is out of bounds, you should
+ *  wrap it around the size of the trickBag.
+ *
  *  @author YOUR NAME HERE
  */
-public class Magician<Abra, Kadabra> implements Iterable<Function<Abra, Kadabra>> {
+public class Magician<Abra, Kadabra> { //FIXME?
     
-    /** A list of functions (tricks) that the magician
+    /** a list of functions (tricks) that the magician
      *  can perform. */
     List<Function<Abra, Kadabra>> trickBag;
     
@@ -47,33 +64,6 @@ public class Magician<Abra, Kadabra> implements Iterable<Function<Abra, Kadabra>
         return null; //FIXME
     }
 
-    /** An iterator for the magician, that essentially
-     *  iterates through the bag of tricks and returns the
-     *  next function at the index provided by the
-     *  selector.
-     */
-    class TrickIterator implements Iterator<Function<Abra, Kadabra>> {
-
-        // ADDTOME ? ? ?
-        
-        /** Return if this magician has any more tricks to perform.*/
-        public boolean hasNext() {
-            return false; // FIXME
-        }
-
-        /** Return the next trick in the magician's bag,
-         *  selected based on the magician's trick selector,
-         *  initially starting at the very first function.
-         *  The selector should apply the function 
-         *  to the previous index used. 
-         * 
-         *  If the selector's returned value is out of bounds,
-         *  next index to use should be that value mod the size
-         *  of the list.
-         */
-        public Function<Abra, Kadabra> next() {
-            return null; // FIXME
-        }
-    }
+    //ADDTOME ? ? ?
     
 }
