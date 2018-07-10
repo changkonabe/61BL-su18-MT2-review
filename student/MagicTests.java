@@ -49,7 +49,7 @@ public class MagicTests {
 
         String inp = "abracadabra";
         
-        assertEquals("Rabbit!", copperfield.perform(1, inp));
+        assertEquals("Rabbit!", copperfield.perform(0, inp));
         assertEquals("ABRACADABRA", copperfield.perform(1, inp));
     }
     
@@ -70,6 +70,7 @@ public class MagicTests {
             "tada!",
             "don't blink",
             "now you see it, now you don't",
+            "it's magic"
         };
         
         String[] expected = new String[] {
@@ -84,9 +85,9 @@ public class MagicTests {
             inputs[i] = trick.apply(inputs[i]);
             i++;
         }
-
+        
         for (int j = 0; j < expected.length; j++) {
-            assertEquals(inputs[i], expected[i]);
+            assertEquals(inputs[j], expected[j]);
         }
     }
 
