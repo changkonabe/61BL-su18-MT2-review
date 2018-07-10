@@ -32,14 +32,14 @@ public class Magician<Abra, Kadabra> implements Iterable<Function<Abra, Kadabra>
     }
 
     /** Add a new TRICK to the magician's bag. */
-    public void learnTrick(Function<Abra, Kadabra> trick) {
+    public void learn(Function<Abra, Kadabra> trick) {
         //FIXME
     }
     
     /** Perform the magician's Ith trick on 
      *  the object RABBIT, returning the result.
      */
-    public Kadabra performTrick(int i, Abra rabbit) {
+    public Kadabra perform(int i, Abra rabbit) {
         return null; //FIXME
     }
 
@@ -50,6 +50,8 @@ public class Magician<Abra, Kadabra> implements Iterable<Function<Abra, Kadabra>
     /** An iterator for the magician. */
     class TrickIterator implements Iterator<Function<Abra, Kadabra>> {
 
+        // ADDTOME ? ? ?
+        
         /** Return if this magician has any more tricks to perform.*/
         public boolean hasNext() {
             return false; // FIXME
